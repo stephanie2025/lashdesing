@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Valores</title>
+    <style>
+        /* Estilo para remover a cor azul e o sublinhado de todos os links */
+        a {
+            color: inherit; /* Remove a cor azul padrão */
+            text-decoration: none; /* Remove o sublinhado */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ce8da3;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: linear-gradient(145deg, #ff0077, #ff94b3);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(36, 34, 34, 0.4);
+            padding: 20px;
+            max-width: 400px;
+            width: 90%;
+            animation: fadeIn 1s ease-out;
+            background-image: url('fundo.jpg'); /* Imagem de fundo 3D */
+            background-size: cover;
+            background-position: center;
+            color: #111010;
+        }
+
+        .container img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container img:hover {
+            transform: scale(1.2);
+        }
+
+        .container h1 {
+            font-size: 24px;
+            color: #fff;
+            animation: textGlow 2s infinite alternate ease-in-out;
+            text-shadow: 0 0 5px #ff0077, 0 0 10px #ff477e, 0 0 15px #ff94b3;
+        }
+
+        .container p {
+            margin: 10px 0;
+            font-size: 16px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .glow {
+            color: #000; /* Cor preta */
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff;
+            animation: glowEffect 1.5s infinite alternate;
+        }
+
+        @keyframes glowEffect {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
+            }
+            to {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+            }
+        }
+
+        .highlighted-text {
+            font-style: italic;
+            animation: blink 1s infinite alternate ease-in-out;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .service {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ff477e;
+            border-radius: 15px;
+            margin: 10px 0;
+            background: #fc6dc0;
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .service:hover {
+            background-color: #000000;
+            transform: scale(1.03);
+        }
+
+        .service span {
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .service span:hover {
+            color: #ff0077;
+            text-shadow: 0px 0px 10px #ff94b3;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 5px #ff0077, 0 0 10px #ff477e, 0 0 20px #ff94b3;
+            }
+            to {
+                text-shadow: 0 0 10px #ff477e, 0 0 15px #ff94b3, 0 0 25px #ffb7d5;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                color: #ff477e;
+            }
+            to {
+                color: #080808;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .service {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .container img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+
+            .container h1 {
+                font-size: 20px;
+            }
+
+            .service {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img.jpg" alt="Estefany PMU">
+        <h1>EstefanyPmu</h1>
+        <p class="glow">Especialista em Design de Sobrancelhas</p>
+        <p class="glow">Extencionista de Cílios</p>
+        <p class="glow">Mestre em Micropigmentação (Sobrancelhas e Lábios)</p>
+
+        <a class="service" href="https://wa.me/5511950030310?text=Ol%C3%A1%2C+tenho+interesse+em+Micropigmenta%C3%A7%C3%A3o+Labial" target="_blank">
+            <span>Micropigmentação Labial</span>
+            <span>R$ 300,00</span>
+        </a>
+
+        <a class="service" href="https://wa.me/5511950030310?text=Ol%C3%A1%2C+tenho+interesse+em+Design+de+Sobrancelhas" target="_blank">
+            <span>Design de Sobrancelhas</span>
+            <span>R$ 35,00</span>
+        </a>
+
+        <a class="service" href="https://wa.me/5511950030310?text=Ol%C3%A1%2C+tenho+interesse+em+Design+com+Henna" target="_blank">
+            <span>Design com Henna</span>
+            <span>R$ 45,00</span>
+        </a>
+
+        <a class="service" href="https://wa.me/5511950030310?text=Ol%C3%A1%2C+tenho+interesse+em+Extens%C3%A3o+de+C%C3%ADlios" target="_blank">
+            <span>Extensão de Cílios</span>
+            <span>R$ 75,00</span>
+        </a>
+
+        <a class="service" href="https://wa.me/5511950030310?text=Ol%C3%A1%2C+tenho+interesse+em+Lash+Lifting%2FBrow+Lamination" target="_blank">
+            <span>Lash Lifting/Brow Lamination</span>
+            <span>R$ 95,00</span>
+        </a>
+
+        <p class="highlighted-text">Cuidar de você não é custo, é investimento!</p>
+    </div>
+</body>
+</html>
